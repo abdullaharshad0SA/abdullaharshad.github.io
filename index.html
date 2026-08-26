@@ -157,6 +157,7 @@
         <span class="role-badge">Analytics Engineering</span>
         <span class="role-badge">Data Modelling</span>
         <span class="role-badge">Data Infrastructure</span>
+        <span class="role-badge">Distributed Data Systems</span>
       </div>
       <p class="hero-summary">Seasoned data professional with 5+ years optimizing the full data lifecycle—from ingestion and transformation through reporting-ready datasets and applied ML. Builds SQL, Python and R workflows for revenue, growth, churn, retention and lifecycle analytics, including incrementality testing, marketing mix modelling, multi-market measurement and automated reporting. Partners with leadership to deliver scalable analytics products that support commercial decisions.</p>
       <div class="hero-btns">
@@ -192,7 +193,7 @@
         <div class="founding-badge">
           🏗️ <span>Joined StackAdapt as one of <strong>fewer than 10 people</strong> on the data team. The team is now <strong>50+</strong>.</span>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem">
           <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem">
             <div style="color:var(--accent);font-size:1.4rem;font-weight:700">30%</div>
             <div style="color:var(--muted);font-size:.8rem;margin-top:.25rem">Reduction in reporting turnaround time</div>
@@ -201,10 +202,14 @@
             <div style="color:var(--accent);font-size:1.4rem;font-weight:700">~$500K</div>
             <div style="color:var(--muted);font-size:.8rem;margin-top:.25rem">Underpaced campaign value surfaced</div>
           </div>
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem">
+            <div style="color:var(--accent);font-size:1.4rem;font-weight:700">80GB+</div>
+            <div style="color:var(--muted);font-size:.8rem;margin-top:.25rem">Identity graph flattened via PySpark</div>
+          </div>
         </div>
         <p class="about-bio">
           I’m Abdullah Arshad, a Senior Data Architect based in Toronto. I optimize the full data lifecycle—from ingestion and transformation through reporting-ready datasets and applied ML. I build SQL, Python and R workflows for revenue, growth, churn, retention and lifecycle analytics, including incrementality testing, marketing mix modelling, and multi-market measurement. My work has focused on building dependable data flows, analytics products, transformation logic, and governance standards that help teams work from more stable and trusted data.<br><br>
-          My experience sits between data architecture and analytics engineering. I build systems that make data easier to deliver, understand, and use across the business, with hands-on work in SQL, Python, R, PySpark, Snowflake, BigQuery, dbt, AWS, Grafana, workflow orchestration, and documentation. I’m especially interested in analytics engineering and data engineering roles where strong data modelling, reliable pipelines, predictive analytics, and stakeholder enablement all matter.
+          My experience sits between data architecture and analytics engineering, with a growing focus on the distributed-systems layer underneath both — multi-cluster reconciliation, large-scale identity resolution, and pipeline reliability at production scale. I build systems that make data easier to deliver, understand, and use across the business, with hands-on work in SQL, Python, R, PySpark, Snowflake, BigQuery, dbt, AWS, Grafana, workflow orchestration, and documentation. I’m especially interested in analytics engineering, data engineering, and data-platform roles where strong data modelling, reliable pipelines, predictive analytics, and stakeholder enablement all matter.
         </p>
       </div>
       <div>
@@ -250,8 +255,15 @@
         <div class="skills-group">
           <h4>Data Infrastructure & Governance</h4>
           <div class="skills-tags">
-            <span class="skill-tag">Snowflake</span><span class="skill-tag">BigQuery</span><span class="skill-tag">Redshift</span><span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Snowflake</span><span class="skill-tag">BigQuery</span><span class="skill-tag">Redshift</span><span class="skill-tag">MySQL</span><span class="skill-tag">TiDB</span>
             <span class="skill-tag">AWS</span><span class="skill-tag">Data Quality</span><span class="skill-tag">GDPR / CCPA</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>Currently Building</h4>
+          <div class="skills-tags">
+            <span class="skill-tag">Go</span><span class="skill-tag">Kafka</span><span class="skill-tag">SQS</span><span class="skill-tag">Kinesis</span>
+            <span class="skill-tag">Terraform</span><span class="skill-tag">DeepLearning.AI Data Engineering Cert — 60%</span>
           </div>
         </div>
       </div>
@@ -356,6 +368,7 @@
   <div class="section-inner">
     <p class="section-label">Work</p>
     <h2 class="section-title">Projects</h2>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:-1.75rem;margin-bottom:2rem">Full code for every project below is anonymized and public — browse the <a href="https://github.com/abdullaharshad0SA/my-portfolio" target="_blank" style="color:var(--accent)">complete repo on GitHub</a>.</p>
     <div class="projects-grid">
 
       <div class="project-card">
@@ -369,20 +382,96 @@
 
       <div class="project-card">
         <div class="project-icon">📦</div>
-        <div class="project-title">Log-Level Data Productization</div>
+        <div class="project-title">Log-Level Delivery Automation</div>
         <div class="project-role">Data Platform / Automation</div>
         <p class="project-desc">
-        Led the standardization and productization of log-level data delivery across the organization. 
-        Designed an end-to-end system where data requests could be initiated through the platform, automatically queued into Kestra workflows, and delivered to clients on a recurring daily schedule. 
-        Improved scalability, reduced manual intervention, and enabled consistent, reliable data delivery.
+        Built a parametrized, polymorphic delivery engine (adapter pattern) that replaced manual per-client SQL extraction. Accepts runtime parameters from Kestra, routes output across four destination types (Google Drive, BigQuery, S3, SFTP), and uses in-memory buffer streaming to avoid disk exhaustion on large extracts. Saved 100+ analyst hours in a single quarter.
         </p>
         <div class="project-tags">
           <span class="project-tag">Kestra</span>
-          <span class="project-tag">Data Pipelines</span>
-          <span class="project-tag">Automation</span>
+          <span class="project-tag">Adapter Pattern</span>
+          <span class="project-tag">Stream Processing</span>
           <span class="project-tag">Python</span>
         </div>
+        <div class="project-footer"><a href="https://github.com/abdullaharshad0SA/my-portfolio/tree/main/log-level-delivery-automation" target="_blank" class="btn-gh">View Code →</a></div>
         </div>
+
+      <div class="project-card">
+        <div class="project-icon">🧬</div>
+        <div class="project-title">Identity Resolution Pipeline</div>
+        <div class="project-role">Distributed Data Processing</div>
+        <p class="project-desc">
+        End-to-end PySpark pipeline resolving entity metadata across 80GB+ datasets. Flattens identity graphs using window functions, handles 1-to-many identity collisions with deterministic assignment, and achieves ~70% fill rate on proprietary synthetic keys against a 50% target — delivered as compressed PSV via secure SFTP.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">PySpark</span>
+          <span class="project-tag">Identity Resolution</span>
+          <span class="project-tag">Graph Processing</span>
+          <span class="project-tag">SFTP</span>
+        </div>
+        <div class="project-footer"><a href="https://github.com/abdullaharshad0SA/my-portfolio/tree/main/identity-resolution-pipeline" target="_blank" class="btn-gh">View Code →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🔍</div>
+        <div class="project-title">Data Quality Validation</div>
+        <div class="project-role">Distributed Reconciliation</div>
+        <p class="project-desc">
+        Automated hourly QA checker reconciling raw bidstream logs across 4 production Redshift clusters against aggregated TiDB records. Applies SKAdNetwork deduplication, flags discrepancies over configurable thresholds, posts incidents to Slack, and upserts audit logs to Snowflake via Kestra orchestration.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Redshift</span>
+          <span class="project-tag">TiDB</span>
+          <span class="project-tag">Anomaly Detection</span>
+          <span class="project-tag">Kestra</span>
+        </div>
+        <div class="project-footer"><a href="https://github.com/abdullaharshad0SA/my-portfolio/tree/main/data-quality-validation" target="_blank" class="btn-gh">View Code →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🩺</div>
+        <div class="project-title">Data Pipeline Monitoring</div>
+        <div class="project-role">Reliability Engineering</div>
+        <p class="project-desc">
+        OOP-based monitoring framework (Python dataclasses) running six integrity tests — missing values, referential integrity, uniqueness, freshness, domain constraints, and financial reconciliation — to catch silent pipeline failures before they hit downstream reporting.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">OOP Design</span>
+          <span class="project-tag">Data Validation</span>
+        </div>
+        <div class="project-footer"><a href="https://github.com/abdullaharshad0SA/my-portfolio/tree/main/data-pipeline-monitoring" target="_blank" class="btn-gh">View Code →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🎯</div>
+        <div class="project-title">Multi-Touch Attribution Modeling</div>
+        <div class="project-role">Statistical Modeling</div>
+        <p class="project-desc">
+        Automated attribution framework applying four simultaneous models — First Touch, Last Touch, Even Split, Position-Weighted U-Shaped — with strict input sanitization for orphan records, collisions, and timeline inversions. Normalizes fractional allocations to guarantee 100% revenue distribution accuracy.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Pandas</span>
+          <span class="project-tag">Attribution</span>
+          <span class="project-tag">Statistical Modeling</span>
+        </div>
+        <div class="project-footer"><a href="https://github.com/abdullaharshad0SA/my-portfolio/tree/main/attribution-modeling" target="_blank" class="btn-gh">View Code →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🗂️</div>
+        <div class="project-title">SQL Models — dbt Analytics</div>
+        <div class="project-role">Data Modelling</div>
+        <p class="project-desc">
+        dbt models for campaign reporting: a conversion-path model at event-level grain with deduplication, journey rollup, and time-to-conversion buckets, plus a campaign delivery-quality report combining goal/budget logic with reporting-health flags.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">dbt</span>
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">Fact/Dimension Modeling</span>
+        </div>
+        <div class="project-footer"><a href="https://github.com/abdullaharshad0SA/my-portfolio/tree/main/sql-models" target="_blank" class="btn-gh">View Code →</a></div>
+      </div>
 
       <div class="project-card">
         <div class="project-icon">📊</div>
